@@ -40,12 +40,7 @@ def safe_read_csv(path: str, nrows=None):
 
 
 def normalize_label(val):
-    """
-    Updated mapping to match your files:
-      1 -> negative (0)
-      2 -> positive (1)
-    Also keeps backwards compatibility for 0->0, 'neg'/'pos' strings, and some 1-5 scale heuristics.
-    """
+
     if pd.isna(val):
         return None
     
