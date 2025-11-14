@@ -3,7 +3,6 @@ import argparse
 import warnings
 from pathlib import Path
 import sys
-
 import numpy as np
 import pandas as pd
 from sklearn.model_selection import train_test_split, cross_val_score, StratifiedKFold
@@ -15,8 +14,7 @@ import joblib
 
 warnings.filterwarnings("ignore")
 
-
-def safe_read_csv(path: str, nrows=None):
+def safe_read_csv(path: str,  nrows=None):
     p = Path(path)
     if not p.exists():
         raise FileNotFoundError(f"File not found: {path}")
